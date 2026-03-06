@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: e3e8f48cccd7ab1449d4156b69871161
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4968611934541969972
+    second: RacecarTrack_WithoutRed_0
+  - first:
+      213: 8906852352618080083
+    second: RacecarTrack_WithoutRed_1
+  - first:
+      213: 1789457842052849121
+    second: RacecarTrack_WithoutRed_2
+  - first:
+      213: -147912584404766117
+    second: RacecarTrack_WithoutRed_3
+  - first:
+      213: -3008828820005384595
+    second: RacecarTrack_WithoutRed_4
+  - first:
+      213: -2486315234605900709
+    second: RacecarTrack_WithoutRed_5
+  - first:
+      213: 5409525886214473928
+    second: RacecarTrack_WithoutRed_6
+  - first:
+      213: 3992745455555559722
+    second: RacecarTrack_WithoutRed_7
+  - first:
+      213: 7036264500906405635
+    second: RacecarTrack_WithoutRed_8
+  - first:
+      213: 5297298026123320945
+    second: RacecarTrack_WithoutRed_9
+  - first:
+      213: -5051450003864292051
+    second: RacecarTrack_WithoutRed_10
+  - first:
+      213: -1536275301346935619
+    second: RacecarTrack_WithoutRed_11
+  - first:
+      213: 9064860963603131045
+    second: RacecarTrack_WithoutRed_12
+  - first:
+      213: -939931969805363392
+    second: RacecarTrack_WithoutRed_13
+  - first:
+      213: -7413870636441016739
+    second: RacecarTrack_WithoutRed_14
+  - first:
+      213: 6916106621835684188
+    second: RacecarTrack_WithoutRed_15
+  - first:
+      213: 6409908208637028858
+    second: RacecarTrack_WithoutRed_16
+  - first:
+      213: -8953242390765963302
+    second: RacecarTrack_WithoutRed_17
+  - first:
+      213: 835140694484395611
+    second: RacecarTrack_WithoutRed_18
+  - first:
+      213: -4781572694138837319
+    second: RacecarTrack_WithoutRed_19
+  - first:
+      213: 4386544741960105470
+    second: RacecarTrack_WithoutRed_20
+  - first:
+      213: -6141222377774868949
+    second: RacecarTrack_WithoutRed_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RacecarTrack_WithoutRed_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 174
+        width: 28
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43af329ca3e04f440800000000000000
+      internalID: 4968611934541969972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_WithoutRed_1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 210
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35727a0360f7b9b70800000000000000
+      internalID: 8906852352618080083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_WithoutRed_2
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 210
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1edd8182d6e65d810800000000000000
+      internalID: 1789457842052849121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_WithoutRed_3
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 175
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b527eb4c94282fdf0800000000000000
+      internalID: -147912584404766117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_WithoutRed_4
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 209
+        width: 34
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6e0f91312e7e36d0800000000000000
+      internalID: -3008828820005384595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_WithoutRed_5
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 175
+        width: 31
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5c5ca99775de7dd0800000000000000
+      internalID: -2486315234605900709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_WithoutRed_6
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 143
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c80813f12f721b40800000000000000
+      internalID: 5409525886214473928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_WithoutRed_7
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 95
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a21c1fc56d4196730800000000000000
+      internalID: 3992745455555559722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_WithoutRed_8
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 97
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30fa73aa845d5a160800000000000000
+      internalID: 7036264500906405635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_WithoutRed_9
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 64
+        width: 30
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17e557c0d78c38940800000000000000
+      internalID: 5297298026123320945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_WithoutRed_10
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 63
+        width: 30
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d25f5073cf4a5e9b0800000000000000
+      internalID: -5051450003864292051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_WithoutRed_11
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 97
+        width: 66
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbc7202c0cd0eaae0800000000000000
+      internalID: -1536275301346935619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_WithoutRed_12
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 33
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aaaed9c40bdccd70800000000000000
+      internalID: 9064860963603131045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_WithoutRed_13
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 33
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 047d7ba7ad0b4f2f0800000000000000
+      internalID: -939931969805363392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_WithoutRed_14
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 33
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d56eb30cfe3ac1990800000000000000
+      internalID: -7413870636441016739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_WithoutRed_15
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 33
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c592e375452faff50800000000000000
+      internalID: 6916106621835684188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_WithoutRed_16
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 65
+        width: 66
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af9abaafd8194f850800000000000000
+      internalID: 6409908208637028858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_WithoutRed_17
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad7fc6e5b71bfb380800000000000000
+      internalID: -8953242390765963302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_WithoutRed_18
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 1
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5627307904079b00800000000000000
+      internalID: 835140694484395611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_WithoutRed_19
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 1
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b6a522f7f074adb0800000000000000
+      internalID: -4781572694138837319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_WithoutRed_20
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efdb3efa33320ec30800000000000000
+      internalID: 4386544741960105470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RacecarTrack_WithoutRed_21
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 15
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b269c06f8cef5caa0800000000000000
+      internalID: -6141222377774868949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 35f75b974cc90024b80afd0a142c9970
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      RacecarTrack_WithoutRed_0: 4968611934541969972
+      RacecarTrack_WithoutRed_1: 8906852352618080083
+      RacecarTrack_WithoutRed_10: -5051450003864292051
+      RacecarTrack_WithoutRed_11: -1536275301346935619
+      RacecarTrack_WithoutRed_12: 9064860963603131045
+      RacecarTrack_WithoutRed_13: -939931969805363392
+      RacecarTrack_WithoutRed_14: -7413870636441016739
+      RacecarTrack_WithoutRed_15: 6916106621835684188
+      RacecarTrack_WithoutRed_16: 6409908208637028858
+      RacecarTrack_WithoutRed_17: -8953242390765963302
+      RacecarTrack_WithoutRed_18: 835140694484395611
+      RacecarTrack_WithoutRed_19: -4781572694138837319
+      RacecarTrack_WithoutRed_2: 1789457842052849121
+      RacecarTrack_WithoutRed_20: 4386544741960105470
+      RacecarTrack_WithoutRed_21: -6141222377774868949
+      RacecarTrack_WithoutRed_3: -147912584404766117
+      RacecarTrack_WithoutRed_4: -3008828820005384595
+      RacecarTrack_WithoutRed_5: -2486315234605900709
+      RacecarTrack_WithoutRed_6: 5409525886214473928
+      RacecarTrack_WithoutRed_7: 3992745455555559722
+      RacecarTrack_WithoutRed_8: 7036264500906405635
+      RacecarTrack_WithoutRed_9: 5297298026123320945
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

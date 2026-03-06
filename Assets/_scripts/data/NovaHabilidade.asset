@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f94fdfb8e1f76499a3d2444edfdcc1, type: 3}
+  m_Name: NovaHabilidade
+  m_EditorClassIdentifier: Assembly-CSharp::TacticsRace.Skills.SkillSO
+  skillName: Atacar
+  icon: {fileID: -848372051, guid: a142e2b6b5cdf524290b0cbf40ce47b3, type: 3}
+  levelsAvailable: 2
+  paCosts: 01000000020000000400000006000000
+  powerValues:
+  - 1
+  - 2
+  - 3
+  - 4
