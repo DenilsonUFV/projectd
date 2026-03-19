@@ -64,5 +64,19 @@ namespace TacticsRace.Core
             }
             return false;
         }
+
+        // No PlayerDataManager.cs
+        private List<GameObject> activeGhosts = new List<GameObject>();
+
+        public void RegisterGhost(GameObject ghost) => activeGhosts.Add(ghost);
+
+        public void ClearGhosts()
+        {
+            foreach (var ghost in activeGhosts)
+            {
+                if (ghost != null) Destroy(ghost);
+            }
+            activeGhosts.Clear();
+        }
     }
 }

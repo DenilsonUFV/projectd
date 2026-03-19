@@ -43,6 +43,9 @@ public class ActionMenuController : MonoBehaviour
     [Header("Sprites de Níveis")]
     [SerializeField] private Sprite[] levelIcons;      // Array com 4 sprites (Números 1, 2, 3, 4)
 
+    [Header("Prefabs de Skills")]
+    [SerializeField] private GameObject ghostPrefab;
+
     // Método chamado pelo PlayerTurnState ao entrar
     public void RefreshVisuals(PlayerTurnState state)
     {
@@ -261,6 +264,35 @@ public class ActionMenuController : MonoBehaviour
                     // AQUI ESTÁ A CHAVE: Passamos 'true' e o valor do 'boost'
                     _manager.ChangeState(new MovementSelectionState(_manager, true, boost));
                 }
+            }
+
+            // No ActionMenuController.cs, dentro do ExecuteSkill
+
+            if (_selectedSkill is FechadaSkillSO fechada)
+            {
+                // 1. Limpa fantasmas antigos (caso existam)
+                PlayerDataManager.Instance.ClearGhosts();
+
+                // 2. Pega a posição e direção do carro
+                GameObject car = _manager.activeCars[0];
+                Vector3Int currentCell = TilemapGridManager.Instance.WorldToCell(car.transform.position);
+
+                // 3. Spawna os fantasmas baseados no nível
+                var offsets = fechada.GetBlockOffsets(level, car.transform);
+                foreach (var offset in offsets)
+                {
+                    Vector3Int targetCell = currentCell + offset;
+
+                    // Só coloca se o tile for caminhável (não spawnar fantasma dentro da parede)
+                    if (TilemapGridManager.Instance.IsCellWalkable(targetCell))
+                    {
+                        GameObject ghost = Instantiate(ghostPrefab); // Arraste o prefab no Inspector
+                        ghost.GetComponent<GhostBlocker>().Initialize(TilemapGridManager.Instance.CellToWorld(targetCell));
+                        PlayerDataManager.Instance.RegisterGhost(ghost);
+                    }
+                }
+
+                Debug.Log($"FECHADA Nível {level} ativada!");
             }
 
             // Reseta o menu para o principal

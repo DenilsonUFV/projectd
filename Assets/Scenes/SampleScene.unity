@@ -289,6 +289,7 @@ MonoBehaviour:
   - {fileID: 4912196239054426577, guid: 3d5e0fab0c471c14ca07e3704b6cb07d, type: 3}
   - {fileID: 4771249121561747730, guid: 47bc625fa4512374bbbf42e41f99fca7, type: 3}
   - {fileID: 989708538898071626, guid: f6d335672ae839443a170af41102861f, type: 3}
+  ghostPrefab: {fileID: 1759038015425937281, guid: 3045c696643a7ac469a55496251df1e3, type: 3}
 --- !u!1 &258210781
 GameObject:
   m_ObjectHideFlags: 0
@@ -2564,7 +2565,7 @@ MonoBehaviour:
   unlockedOffensiveSkills:
   - {fileID: 11400000, guid: 76ccb4dc4d546a343ab00119df81811b, type: 2}
   unlockedDefensiveSkills:
-  - {fileID: 11400000, guid: 3558e02df86a7c34fa0e883ffe016e52, type: 2}
+  - {fileID: 11400000, guid: d47effa999475ee4ea135c39683ffade, type: 2}
   currentPA: 3
   maxPA: 10
   temporaryMovementBoost: 0

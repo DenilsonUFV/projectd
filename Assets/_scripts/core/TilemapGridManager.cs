@@ -47,6 +47,19 @@ namespace TacticsRace.Grid
             return curveTilemap.HasTile(cell);
         }
 
+        public void RemoveOccupancy(Vector3Int cell)
+        {
+            // Se você usa um Dictionary<Vector3Int, GameObject> para ocupação:
+            if (occupiedCells.ContainsKey(cell))
+            {
+                occupiedCells.Remove(cell);
+                // Debug.Log($"Célula {cell} agora está livre.");
+            }
+
+            // Se você usa uma lógica de "IsCellWalkable" baseada em Tags ou Layers, 
+            // certifique-se de que ela consulte esse dicionário 'occupiedCells'.
+        }
+
         public Vector3Int WorldToCell(Vector3 worldPos) => baseTilemap.WorldToCell(worldPos);
         public Vector3 CellToWorld(Vector3Int cellCoords) => baseTilemap.GetCellCenterWorld(cellCoords);
     }

@@ -29,6 +29,8 @@ public class PlayerTurnState : IRaceState
 
     public void Enter()
     {
+        PlayerDataManager.Instance.ClearGhosts();
+
         // Notifica o menu para atualizar as cores dos ícones
         var menu = Object.FindFirstObjectByType<ActionMenuController>();
         if (menu != null)
