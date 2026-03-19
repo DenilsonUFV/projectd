@@ -31,13 +31,10 @@ public class MovementSelectionState : IRaceState
     private void CalculateFinalArcOnly()
     {
         _reachableCells.Clear();
-        Transform carTransform = _owner.activeCars[0].transform;
+        Transform carTransform = _owner.CurrentActiveCar.transform;
         Vector3Int startCell = TilemapGridManager.Instance.WorldToCell(carTransform.position);
-
-        // IMPORTANTE: Use o forward do carro, mas vamos garantir que ele não seja zero
         Vector2 startForward = carTransform.up;
 
-        // Se for bônus, usa o bonusRange passado no construtor
         int range = _isBonusMovement ? _bonusRange : _owner.playerDriver.agility;
 
         Queue<(Vector3Int cell, int dist)> queue = new Queue<(Vector3Int, int)>();
@@ -46,16 +43,18 @@ public class MovementSelectionState : IRaceState
         HashSet<Vector3Int> visited = new HashSet<Vector3Int>();
         visited.Add(startCell);
 
+        // 1. PRIMEIRO: Executa o BFS completo
         while (queue.Count > 0)
         {
             var current = queue.Dequeue();
 
-            // Só mostramos o arco final (últimos 2 passos)
+            // Adiciona ao arco final
             if (current.dist >= (range - 1) && current.dist <= range && current.dist > 0)
             {
                 _reachableCells.Add(current.cell);
             }
 
+            // Continua expandindo a busca
             if (current.dist < range)
             {
                 Vector3Int[] neighbors = {
@@ -69,18 +68,13 @@ public class MovementSelectionState : IRaceState
                 {
                     if (visited.Contains(n)) continue;
 
-                    // CÁLCULO DE DIREÇÃO CORRIGIDO:
-                    // Em distâncias curtas (Drift), o vetor precisa ser preciso.
                     Vector2 diff = new Vector2(n.x - startCell.x, n.y - startCell.y);
-
-                    // Se o vizinho for a própria célula de início (dist 0), ignoramos
                     if (diff.sqrMagnitude < 0.1f) continue;
 
                     float dot = Vector2.Dot(startForward.normalized, diff.normalized);
 
-                    // No Drift, permitimos uma abertura levemente maior (0.0 em vez de 0.1) 
-                    // para não bloquear curvas fechadas
-                    if (dot < -0.1f) continue;
+                    // Tolerância de -0.4f conforme combinamos
+                    if (dot < -0.4f) continue;
 
                     if (TilemapGridManager.Instance.IsCellWalkable(n))
                     {
@@ -90,8 +84,28 @@ public class MovementSelectionState : IRaceState
                 }
             }
         }
-        // REMOVIDO: PlayerDataManager.Instance.ClearBoost() daqui!
+
+        // 2. DEPOIS: Se após o BFS inteiro não achou nada, aplica o Fallback
+        if (_reachableCells.Count == 0)
+        {
+            Debug.LogWarning("Nenhum caminho à frente! Ativando Manobra de Recuperação.");
+
+            Vector3Int[] neighbors = {
+            startCell + Vector3Int.up, startCell + Vector3Int.down,
+            startCell + Vector3Int.left, startCell + Vector3Int.right
+        };
+
+            foreach (var n in neighbors)
+            {
+                // Adiciona vizinhos imediatos que não sejam paredes
+                if (TilemapGridManager.Instance.IsCellWalkable(n))
+                {
+                    _reachableCells.Add(n);
+                }
+            }
+        }
     }
+
 
     public void Update()
     {
@@ -119,7 +133,7 @@ public class MovementSelectionState : IRaceState
         _isMoving = true;
         _overlay.ClearRange();
 
-        GameObject car = _owner.activeCars[0];
+        GameObject car = _owner.CurrentActiveCar;
         Vector3 targetPos = TilemapGridManager.Instance.CellToWorld(destination);
 
         // Rotação suave para o destino final

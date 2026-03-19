@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Piloto Exemplo 2
   m_EditorClassIdentifier: Assembly-CSharp::DriverData
   driverName: Takumi
-  carPrefab: {fileID: 1283090211646005715, guid: 1f31e7d3ddf5132419c068863ec99093, type: 3}
-  baseSpeed: 3
+  carPrefab: {fileID: 1283090211646005715, guid: 6b88cbc8b1f3a7c42bafff2c84a8bee7, type: 3}
+  agility: 4
+  acceleration: 8

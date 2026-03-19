@@ -73,7 +73,7 @@ public class ActionMenuController : MonoBehaviour
         if (_selectedSkill == null) return;
 
         // Pegamos a posição atual do carro
-        Vector3Int carPos = TilemapGridManager.Instance.WorldToCell(_manager.activeCars[0].transform.position);
+        Vector3Int carPos = TilemapGridManager.Instance.WorldToCell(_manager.CurrentActiveCar.transform.position);
         int agility = PlayerDataManager.Instance.activeDriver.agility;
 
         // A habilidade pode ser usada aqui?
@@ -227,7 +227,7 @@ public class ActionMenuController : MonoBehaviour
             SkillSO selected = skillsList[index];
 
             // --- A TRANCA REAL ---
-            Vector3Int carPos = TilemapGridManager.Instance.WorldToCell(_manager.activeCars[0].transform.position);
+            Vector3Int carPos = TilemapGridManager.Instance.WorldToCell(_manager.CurrentActiveCar.transform.position);
             int agility = PlayerDataManager.Instance.activeDriver.agility;
 
             if (!selected.CanUse(carPos, agility))
@@ -274,7 +274,7 @@ public class ActionMenuController : MonoBehaviour
                 PlayerDataManager.Instance.ClearGhosts();
 
                 // 2. Pega a posição e direção do carro
-                GameObject car = _manager.activeCars[0];
+                GameObject car = _manager.CurrentActiveCar;
                 Vector3Int currentCell = TilemapGridManager.Instance.WorldToCell(car.transform.position);
 
                 // 3. Spawna os fantasmas baseados no nível
@@ -340,19 +340,20 @@ public class ActionMenuController : MonoBehaviour
                     EnterSubMenu(MenuLevel.OFFENSIVE);
                     break;
 
-                case 2: // BAIXO: Terminar Turno
-                    if (hasMoved) // SÓ PERMITE SE JÁ MOVEU
-                    {
-                        StartCoroutine(HighlightSelectionRoutine(index));
-                       // _manager.ChangeState(new EnemyTurnState(_manager));
-                    }
-                    else
-                    {
-                        Debug.Log("Bloqueado: Mova-se primeiro!");
-                    }
-                    break;
+            case 2: // BAIXO: Terminar Turno
+                if (hasMoved)
+                {
+                    StartCoroutine(HighlightSelectionRoutine(index));
+                    // Em vez de mudar para um estado fixo, avançamos o turno na máquina
+                    _manager.AdvanceTurn();
+                }
+                else
+                {
+                    Debug.Log("Bloqueado: Mova-se primeiro!");
+                }
+                break;
 
-                case 3: // ESQUERDA: Defensivo
+            case 3: // ESQUERDA: Defensivo
                     StartCoroutine(HighlightSelectionRoutine(index));
                     EnterSubMenu(MenuLevel.DEFENSIVE);
                     break;
@@ -367,7 +368,7 @@ public class ActionMenuController : MonoBehaviour
             ? PlayerDataManager.Instance.unlockedOffensiveSkills
             : PlayerDataManager.Instance.unlockedDefensiveSkills;
 
-        Vector3Int carPos = TilemapGridManager.Instance.WorldToCell(_manager.activeCars[0].transform.position);
+        Vector3Int carPos = TilemapGridManager.Instance.WorldToCell(_manager.CurrentActiveCar.transform.position);
         int agility = PlayerDataManager.Instance.activeDriver.agility;
 
         for (int i = 0; i < iconImages.Length; i++)

@@ -27,8 +27,59 @@ public class RaceStateMachine : MonoBehaviour
     public static event Action<bool> OnToggleMinigameUI;
     public static event Action<float> OnMinigameUpdate;
 
+
+    // Adicione isso à RaceStateMachine.cs
+    [Header("Navegação")]
+    public TrackPath trackPath;
+    private Dictionary<GameObject, int> carWaypointIndices = new Dictionary<GameObject, int>();
+
+
     void Start() => ChangeState(new SetupState(this));
     void Update() => _currentState?.Update();
+
+    private int _currentCarIndex = 0;
+    // Propriedade para facilitar o acesso ao carro do turno atual
+    public GameObject CurrentActiveCar => (activeCars.Count > 0) ? activeCars[_currentCarIndex] : null;
+
+    public Transform GetNextWaypoint(GameObject car)
+    {
+        if (!carWaypointIndices.ContainsKey(car)) carWaypointIndices[car] = 0;
+
+        int index = carWaypointIndices[car];
+        if (index < trackPath.waypoints.Count)
+            return trackPath.waypoints[index];
+
+        return null; // Chegou ao fim!
+    }
+
+    public void UpdateWaypoint(GameObject car)
+    {
+        // Se o carro estiver muito perto do waypoint atual, passa para o próximo
+        Transform target = GetNextWaypoint(car);
+        if (target == null) return;
+
+        if (Vector3.Distance(car.transform.position, target.position) < 2.0f)
+        {
+            carWaypointIndices[car]++;
+            Debug.Log($"{car.name} passou pelo checkpoint {carWaypointIndices[car]}");
+        }
+    }
+    public void AdvanceTurn()
+    {
+        // Passa para o próximo carro na lista activeCars
+        _currentCarIndex = (_currentCarIndex + 1) % activeCars.Count;
+
+        // Lógica de decisão: Se o carro atual tem a Tag "Player", entra no PlayerTurnState
+        // Caso contrário, entra no AITurnState
+        if (CurrentActiveCar.CompareTag("Player"))
+        {
+            ChangeState(new PlayerTurnState(this));
+        }
+        else
+        {
+            ChangeState(new AITurnState(this, CurrentActiveCar));
+        }
+    }
 
     public void ChangeState(IRaceState newState)
     {
